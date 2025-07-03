@@ -17,7 +17,7 @@
 
 <?php 
 
-$conex = new mysqli('localhost','root','messi','marketdb');
+$conex = new mysqli('localhost','root','benja','olimpiadas');
 
 
 if (isset($_POST['enviar'])) {
@@ -34,10 +34,7 @@ if (isset($_POST['enviar'])) {
       $consulta->bind_param("sssiii",$name,$descripcion,$img,$precio,$stock,$id_categoria);
 
       if($consulta->execute()){
-        echo '<h3 class="ok">¡Producto enviado a la base de datos!</h3>';
-        header("Location: /webcompras/agregarDB/sendProductosform.php");
-      }else{
-        echo '<h3 class="bad">Error el enviar el producto a la base de datos!</h3>';
+         header('Location: sendProductosform.php');
       }
 
       $consulta->close();

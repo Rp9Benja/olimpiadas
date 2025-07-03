@@ -1,6 +1,6 @@
 <?php
 
-$conexion = new mysqli('localhost', 'root', 'messi', 'marketdb');
+$conexion = new mysqli('localhost', 'root', 'benja', 'olimpiadas');
 
 $query = "SELECT id_producto,nombre_producto, precio, img_producto FROM productos";
 $result = $conexion->query($query);
